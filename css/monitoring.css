@@ -1977,6 +1977,11 @@ nav>ul.container li>ul>li>a {
     justify-content: space-between;
     gap: 15px;
     position: relative;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -1989,6 +1994,43 @@ nav>ul.container li>ul>li>a {
 .monitoring .container div.monitoring-decription,
 .monitoring .container div.monitoring-dealway {
     flex-direction: column;
+}
+
+.monitoring .container div.monitoring-normal,
+.monitoring .container div.monitoring-current {
+    align-items: center;
+}
+
+.monitoring .container div.monitoring-normal {
+    margin-top: 20px;
+}
+
+.monitoring .container div.monitoring-current {
+    margin: 20px 0;
+}
+
+@media (max-width: 767px) {
+    .monitoring .container div.monitoring-normal,
+    .monitoring .container div.monitoring-current {
+        align-items: flex-start;
+        gap: 55px;
+    }
+    .monitoring .container div.monitoring-normal {
+        margin-top: 0;
+    }
+    .monitoring .container div.monitoring-current {
+        margin: 0 0 30px;
+    }
+}
+
+.monitoring .container div.monitoring-dealway,
+.monitoring .container div.monitoring-medicine {
+    display: none;
+}
+
+.monitoring .container div.monitoring-dealway.show,
+.monitoring .container div.monitoring-medicine.show {
+    display: flex;
 }
 
 .monitoring .container div.monitoring-section .monitoring-title h5 {
@@ -2041,6 +2083,11 @@ nav>ul.container li>ul>li>a {
 .monitoring .container div.monitoring-section .monitoring-value {
     width: 60%;
     position: relative;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -2073,33 +2120,6 @@ nav>ul.container li>ul>li>a {
     }
 }
 
-.monitoring .container div.monitoring-normal,
-.monitoring .container div.monitoring-current {
-    align-items: center;
-}
-
-.monitoring .container div.monitoring-normal {
-    margin-top: 20px;
-}
-
-.monitoring .container div.monitoring-current {
-    margin: 20px 0;
-}
-
-@media (max-width: 767px) {
-    .monitoring .container div.monitoring-normal,
-    .monitoring .container div.monitoring-current {
-        align-items: flex-start;
-        gap: 55px;
-    }
-    .monitoring .container div.monitoring-normal {
-        margin-top: 0;
-    }
-    .monitoring .container div.monitoring-current {
-        margin: 0 0 30px;
-    }
-}
-
 .monitoring .container div.monitoring-normal .normal-value .normal-range,
 .monitoring .container div.monitoring-current .current-value .current-range {
     width: 80%;
@@ -2111,6 +2131,11 @@ nav>ul.container li>ul>li>a {
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -2146,6 +2171,11 @@ nav>ul.container li>ul>li>a {
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-current .current-value .current-range .current-normal {
@@ -2177,6 +2207,11 @@ nav>ul.container li>ul>li>a {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-normal .normal-value .normal-range span {
@@ -2222,6 +2257,11 @@ nav>ul.container li>ul>li>a {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-normal .normal-value .normal-range span::before,
@@ -2240,6 +2280,11 @@ nav>ul.container li>ul>li>a {
 .monitoring .container div.monitoring-dealway .monitoring-value p {
     line-height: 1.8;
     margin-bottom: 0;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-medicine .medicine-value ul.medicine-list {
@@ -2249,10 +2294,20 @@ nav>ul.container li>ul>li>a {
     flex-direction: column;
     gap: 5px;
     margin-bottom: 0;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-medicine .medicine-value ul.medicine-list li {
     line-height: 1.8;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-links {

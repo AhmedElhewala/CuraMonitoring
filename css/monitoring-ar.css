@@ -229,11 +229,6 @@ nav>ul.container li>ul {
     right: 0;
 }
 
-.monitoring .container div.monitoring-current .current-value .current-range .current-scale {
-    left: unset;
-    right: -1px;
-}
-
 .monitoring .container div.monitoring-normal .normal-value .normal-range span.normal-min {
     left: unset;
     right: -15px;

@@ -31,8 +31,8 @@ html {
 body {
     font-family: "Roboto", sans-serif;
     width: 100%;
-    background-color: var(--theme-background);
     direction: ltr;
+    background-color: var(--theme-background);
     transition: var(--main-transition);
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
@@ -80,11 +80,8 @@ a {
     text-decoration: none;
 }
 
-a:focus-visible,
-input:focus-visible,
-button:focus-visible,
-select:focus-visible {
-    outline: none;
+a:focus-visible {
+    border: none;
 }
 
 img,
@@ -234,6 +231,11 @@ button {
     -o-transform: rotate(45deg);
     animation: pulse 6s linear infinite;
     -webkit-animation: pulse 6s linear infinite;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @-webkit-keyframes pulse {
@@ -331,6 +333,11 @@ button {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .preload .heart::before {
@@ -413,6 +420,11 @@ header .container .toggle-menu {
     -ms-flex-order: 1;
     order: 1;
     cursor: pointer;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -502,6 +514,11 @@ header .container .toggle-menu.open span.in::after {
 header .container .logo-icon {
     -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -565,6 +582,11 @@ header .container .search-input {
     -ms-flex-pack: start;
     justify-content: flex-start;
     position: relative;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (min-width: 768px) {
@@ -681,6 +703,11 @@ header .container .user-section {
     color: #fff;
     position: relative;
     cursor: pointer;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (min-width: 768px) {
@@ -723,6 +750,11 @@ header .container .user-section .profile {
     -ms-flex-pack: end;
     justify-content: flex-end;
     gap: 25px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (min-width: 768px) {
@@ -747,10 +779,20 @@ header .container .user-section .profile .profile-img {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     overflow: hidden;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 header .container .user-section .profile .profile-img img {
     max-width: 100%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 header .container .user-section .profile .profile-name {
@@ -769,6 +811,11 @@ header .container .user-section .profile .profile-name {
     -ms-user-select: none;
     user-select: none;
     color: var(--light-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -781,6 +828,11 @@ header .container .user-section .profile .profile-name span,
 header .container .user-section .profile .profile-name svg {
     display: inline-block;
     font-size: 14px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -816,6 +868,11 @@ header .container .user-section .notification-icon {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -827,6 +884,11 @@ header .container .user-section .notification-icon {
 
 header .container .user-section .notification-icon svg {
     font-size: 20px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 header .container .user-section .notification-icon .notification-counter {
@@ -852,6 +914,11 @@ header .container .user-section .notification-icon .notification-counter {
     top: 7px;
     right: 7px;
     font-size: 12px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -870,6 +937,11 @@ header .container .header-login {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -895,6 +967,11 @@ header .container .header-login>a {
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -1012,6 +1089,11 @@ header .container .header-login>a:hover::after {
     -ms-flex-align: center;
     align-items: center;
     gap: 20px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -1043,6 +1125,11 @@ header .container .header-login>a:hover::after {
 .profile-pop ul>li a {
     width: 100%;
     color: var(--dark-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (min-width: 768px) {
@@ -1240,6 +1327,11 @@ header .container .header-login>a:hover::after {
     margin: 0;
     overflow: visible;
     padding: 0 40px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -1260,6 +1352,11 @@ header .container .header-login>a:hover::after {
     flex-direction: column;
     position: relative;
     overflow: visible;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .notification .notification-list .notification-box:not(:last-of-type) {
@@ -1279,6 +1376,11 @@ header .container .header-login>a:hover::after {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .notification .notification-list .notification-box div {
@@ -1289,6 +1391,11 @@ header .container .header-login>a:hover::after {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .notification .notification-list .notification-box div.box-content {
@@ -1296,17 +1403,32 @@ header .container .header-login>a:hover::after {
     -ms-flex-align: end;
     align-items: flex-end;
     margin-bottom: 10px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .notification .notification-list .notification-box div.box-content .notifi-text {
     display: inline-block;
     width: 70%;
     line-height: 1.6;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .notification .notification-list .notification-box div.box-content .notifi-time {
     color: #888;
     font-size: 14px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -1397,6 +1519,11 @@ nav>ul.container li {
     cursor: pointer;
     position: relative;
     gap: 10px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -1441,6 +1568,11 @@ nav>ul.container li:hover>ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 nav>ul.container li a,
@@ -1448,6 +1580,11 @@ nav>ul.container li svg {
     color: var(--light-color);
     z-index: 555;
     font-size: 14px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 nav>ul.container li svg {
@@ -1478,6 +1615,11 @@ nav>ul.container li>ul {
     align-items: flex-start;
     padding: 0;
     z-index: 66666;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (max-width: 767px) {
@@ -1512,6 +1654,11 @@ nav>ul.container li>ul>li:hover {
 nav>ul.container li>ul>li>a {
     width: 100%;
     color: var(--dark-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 
@@ -1587,16 +1734,31 @@ nav>ul.container li>ul>li>a {
 
 .option .option-box {
     width: 100%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .option-box .option-heading {
     display: block;
     color: var(--theme-background);
     margin-bottom: 10px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .option-box .color-option {
     width: 100%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .option-box .color-option ul {
@@ -1614,6 +1776,11 @@ nav>ul.container li>ul>li>a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .option-box .color-option ul.color li {
@@ -1643,6 +1810,11 @@ nav>ul.container li>ul>li>a {
 .option .mood-option {
     width: 100%;
     margin: 30px 0;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .mood-option .mood {
@@ -1659,6 +1831,11 @@ nav>ul.container li>ul>li>a {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 15px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .mood-option .mood .mood-bar {
@@ -1736,10 +1913,20 @@ nav>ul.container li>ul>li>a {
 .option .mood-option .mood .moon svg,
 .option .mood-option .mood .sun svg {
     font-size: 20px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .lang-option {
     width: 100%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .lang-option .lang-box {
@@ -1756,6 +1943,11 @@ nav>ul.container li>ul>li>a {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .option .lang-option .lang-box>a {
@@ -1873,6 +2065,11 @@ nav>ul.container li>ul>li>a {
     background-color: var(--theme-background);
     color: var(--theme-color);
     overflow: hidden;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .heading {
@@ -1912,6 +2109,11 @@ nav>ul.container li>ul>li>a {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 @media (min-width: 768px) {
@@ -2036,6 +2238,11 @@ nav>ul.container li>ul>li>a {
 .monitoring .container div.monitoring-section .monitoring-title h5 {
     position: relative;
     line-height: 1;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-section .monitoring-title h5:after {
@@ -2050,6 +2257,11 @@ nav>ul.container li>ul>li>a {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-pet .monitoring-title h5:after {
@@ -2344,6 +2556,11 @@ nav>ul.container li>ul>li>a {
     -o-border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 
 .monitoring .container div.monitoring-links a::after {
@@ -2568,6 +2785,7 @@ footer .container .bottom {
     align-items: center;
     color: var(--light-color);
     font-size: 14px;
+    direction: ltr;
 }
 
 @media (max-width: 767px) {
@@ -2587,26 +2805,25 @@ footer .container .bottom span {
     -ms-flex-align: center;
     align-items: center;
     font-size: 16px;
-    margin-right: 5px;
+    margin: 0 5px;
     color: var(--option-color);
+    gap: 5px;
 }
 
 @media (max-width: 767px) {
     footer .container .bottom span {
         font-size: 14px;
-        margin-right: 2px;
+        margin-right: 0 2px;
     }
 }
 
 footer .container .bottom svg {
     font-size: 16px;
-    margin-left: 5px;
 }
 
 @media (max-width: 767px) {
     footer .container .bottom svg {
         font-size: 14px;
-        margin-left: 2px;
     }
 }
 

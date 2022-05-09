@@ -1960,6 +1960,7 @@ nav>ul.container li>ul>li>a {
 
 @media (max-width: 767px) {
     .monitoring .container {
+        max-width: 95%;
         padding: 40px 25px;
     }
 }

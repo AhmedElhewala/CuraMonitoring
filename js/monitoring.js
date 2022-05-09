@@ -30,11 +30,18 @@ let notificationSetting = `.notification .notification-setting`;
 // go up button variables
 let goUpBtn = document.querySelector(`.go-up`);
 // monitoring variables
+let normalMinVal = parseInt($("body").css("--normal-min"));
+let normalMaxVal = parseInt($("body").css("--normal-max"));
+let emergencyMinVal = 15;
+let emergencyMaxVal = 75;
+let normalMinPos = `.monitoring .container div.monitoring-current .current-value .current-range span.normal-min`;
+let normalMaxPos = `.monitoring .container div.monitoring-current .current-value .current-range span.normal-max`;
+let normalScaleMin = `.monitoring .container div.monitoring-normal .normal-value .normal-range span.normal-min`;
+let normalScaleMax = `.monitoring .container div.monitoring-normal .normal-value .normal-range span.normal-max`;
 let currentScale = `.monitoring .container div.monitoring-current .current-value .current-range .current-scale`;
 let currentValue = `.monitoring .container div.monitoring-current .current-value .current-range .current-scale span.scale-value`;
 let dealwaySection = `.monitoring .container div.monitoring-dealway`;
 let medicineSection = `.monitoring .container div.monitoring-medicine`;
-
 // localstorage values variables
 let saveLogo = localStorage.getItem("logo-color");
 let saveColor = localStorage.getItem("option-color");
@@ -70,11 +77,11 @@ if (saveThemeStat !== null) {
 }
 // theme background color value
 if (saveThemeBG !== null) {
-    $("body").get(0).style.setProperty("--theme-background", saveThemeBG);
+    $("body").css("--theme-background", saveThemeBG);
 }
 // theme color value
 if (saveThemeClr !== null) {
-    $("body").get(0).style.setProperty("--theme-color", saveThemeClr);
+    $("body").css("--theme-color", saveThemeClr);
 }
 // page language value
 if (saveLanguage !== null) {
@@ -99,10 +106,12 @@ if (saveLanguage !== null) {
     }
 }
 // End check Localstorage
-// Fade preloader out & update the scale value
+// Update the current scale
+updateNormlaRange();
+updateTheScale();
+// Fade preloader out
 $(document).ready(() => {
     $(preLoad).fadeOut("slow");
-    updateTheScale();
 });
 // Toggle profile menu
 $(profile).on("click", function() {
@@ -182,15 +191,15 @@ optColors.forEach(li => {
 // click on theme bar
 $(themeBar).on("click", function() {
     if ($(themeBar).hasClass("light")) {
-        $("body").get(0).style.setProperty("--theme-background", "#333");
-        $("body").get(0).style.setProperty("--theme-color", "#fff");
+        $("body").css("--theme-background", "#333");
+        $("body").css("--theme-color", "#fff");
         localStorage.setItem("theme-status", "dark");
         localStorage.setItem("theme-background", "#333");
         localStorage.setItem("theme-color", "#fff");
         $(themeBar).toggleClass("light dark");
     } else if ($(themeBar).hasClass("dark")) {
-        $("body").get(0).style.setProperty("--theme-background", "#fff");
-        $("body").get(0).style.setProperty("--theme-color", "#333");
+        $("body").css("--theme-background", "#fff");
+        $("body").css("--theme-color", "#333");
         localStorage.setItem("theme-status", "light");
         localStorage.setItem("theme-background", "#fff");
         localStorage.setItem("theme-color", "#333");
@@ -200,8 +209,8 @@ $(themeBar).on("click", function() {
 // click on moon icon
 $(themeMoon).on("click", function() {
     if ($(themeBar).hasClass("light")) {
-        $("body").get(0).style.setProperty("--theme-background", "#333");
-        $("body").get(0).style.setProperty("--theme-color", "#fff");
+        $("body").css("--theme-background", "#333");
+        $("body").css("--theme-color", "#fff");
         localStorage.setItem("theme-status", "dark");
         localStorage.setItem("theme-background", "#333");
         localStorage.setItem("theme-color", "#fff");
@@ -211,8 +220,8 @@ $(themeMoon).on("click", function() {
 // click on sun icon
 $(themeSun).on("click", function() {
     if ($(themeBar).hasClass("dark")) {
-        $("body").get(0).style.setProperty("--theme-background", "#fff");
-        $("body").get(0).style.setProperty("--theme-color", "#333");
+        $("body").css("--theme-background", "#fff");
+        $("body").css("--theme-color", "#333");
         localStorage.setItem("theme-status", "light");
         localStorage.setItem("theme-background", "#fff");
         localStorage.setItem("theme-color", "#333");
@@ -323,30 +332,29 @@ let changingTheScale = setInterval(function() {
     $(currentValue).text(newCurrent);
     updateTheScale()
 }, 3000);
-
+// Update the current scale
 function updateTheScale() {
     $(currentScale).width(`${$(currentValue).text()}%`);
-    if ($(currentValue).text() >= 75 || $(currentValue).text() <= 15) {
+    if ($(currentValue).text() >= emergencyMaxVal || $(currentValue).text() <= emergencyMinVal) {
         if ($(currentScale).hasClass("current-normal")) {
             $(currentScale).removeClass("current-normal").addClass("current-emergency");
         } else if ($(currentScale).hasClass("current-sick")) {
             $(currentScale).removeClass("current-sick").addClass("current-emergency");
         }
-    }
-    if (($(currentValue).text() > 50 && $(currentValue).text() < 75) || ($(currentValue).text() > 15 && $(currentValue).text() < 30)) {
+    } else if (($(currentValue).text() > normalMaxVal && $(currentValue).text() < emergencyMaxVal) || ($(currentValue).text() > emergencyMinVal && $(currentValue).text() < normalMinVal)) {
         if ($(currentScale).hasClass("current-normal")) {
             $(currentScale).removeClass("current-normal").addClass("current-sick");
         } else if ($(currentScale).hasClass("current-emergency")) {
             $(currentScale).removeClass("current-emergency").addClass("current-sick");
         }
-    }
-    if (($(currentValue).text() >= 30 && $(currentValue).text() <= 50)) {
+    } else if (($(currentValue).text() >= normalMinVal && $(currentValue).text() <= normalMaxVal)) {
         if ($(currentScale).hasClass("current-sick")) {
             $(currentScale).removeClass("current-sick").addClass("current-normal");
         } else if ($(currentScale).hasClass("current-emergency")) {
             $(currentScale).removeClass("current-emergency").addClass("current-normal");
         }
     }
+
     if ($(currentScale).hasClass("current-sick") || $(currentScale).hasClass("current-emergency")) {
         if (!$(dealwaySection).hasClass("show")) {
             $(dealwaySection).slideDown("fast");
@@ -369,4 +377,13 @@ function updateTheScale() {
             $(medicineSection).removeClass("show");
         }
     }
+};
+// Update normal range positions
+function updateNormlaRange() {
+    $(normalScaleMin).text($(normalMinPos).text());
+    $(normalScaleMax).text($(normalMaxPos).text());
+    $("body").css("--normal-min", `${$(normalMinPos).text()}%`);
+    $("body").css("--normal-max", `${$(normalMaxPos).text()}%`);
+    normalMinVal = $(normalMinPos).text();
+    normalMaxVal = $(normalMaxPos).text();
 }

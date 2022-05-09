@@ -1965,6 +1965,12 @@ nav>ul.container li>ul>li>a {
     }
 }
 
+@media (max-width: 480px) {
+    .monitoring .container {
+        padding: 40px 20px;
+    }
+}
+
 .monitoring .container div.monitoring-section {
     width: 100%;
     display: flex;

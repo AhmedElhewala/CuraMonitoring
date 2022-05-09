@@ -1,0 +1,2 @@
+# CuraMonitoring
+Cura monitoring page

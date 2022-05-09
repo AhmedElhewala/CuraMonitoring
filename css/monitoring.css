@@ -2060,7 +2060,7 @@ nav>ul.container li>ul>li>a {
 
 .monitoring {
     width: 100%;
-    padding-top: var(--section-padding);
+    padding-top: 60px;
     padding-bottom: var(--section-padding);
     background-image: url("../assets/imgs/background-2.webp");
     background-size: cover;
@@ -2143,6 +2143,7 @@ nav>ul.container li>ul>li>a {
 }
 
 .monitoring .container {
+    max-width: 85% !important;
     padding: 50px 40px;
     color: var(--theme-background);
     background-color: var(--theme-color);

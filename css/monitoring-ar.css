@@ -224,5 +224,50 @@ nav>ul.container li>ul {
 
 /* Start Monitoring */
 
+.monitoring .container div.monitoring-section .monitoring-title h5:after {
+    left: unset;
+    right: 0;
+}
+
+.monitoring .container div.monitoring-current .current-value .current-range .current-scale {
+    left: unset;
+    right: -1px;
+}
+
+.monitoring .container div.monitoring-normal .normal-value .normal-range span.normal-min {
+    left: unset;
+    right: -15px;
+}
+
+.monitoring .container div.monitoring-normal .normal-value .normal-range span.normal-max {
+    right: unset;
+    left: -15px;
+}
+
+.monitoring .container div.monitoring-current .current-value .current-range .current-scale span.scale-value {
+    right: unset;
+    left: -15px;
+}
+
+.monitoring .container div.monitoring-current .current-value .current-range span.normal-min {
+    left: unset;
+    right: calc(30% - 15px);
+}
+
+.monitoring .container div.monitoring-current .current-value .current-range span.normal-max {
+    left: unset;
+    right: calc(50% - 15px);
+}
+
+.monitoring .container div.monitoring-links a::after {
+    left: unset;
+    right: 0;
+}
+
+.monitoring .container div.monitoring-links a:hover::after {
+    left: unset;
+    right: 105%;
+}
+
 
 /* End Monitoring */

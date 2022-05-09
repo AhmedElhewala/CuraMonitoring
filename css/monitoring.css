@@ -2137,8 +2137,10 @@ nav>ul.container li>ul>li>a {
 
 .monitoring .container div.monitoring-current .current-value .current-range .current-scale {
     width: 75%;
-    height: 100%;
+    height: calc(100% + 2px);
     position: relative;
+    top: -1px;
+    left: -1px;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;

@@ -354,7 +354,6 @@ function updateTheScale() {
             $(currentScale).removeClass("current-emergency").addClass("current-normal");
         }
     }
-
     if ($(currentScale).hasClass("current-sick") || $(currentScale).hasClass("current-emergency")) {
         if (!$(dealwaySection).hasClass("show")) {
             $(dealwaySection).slideDown("fast");

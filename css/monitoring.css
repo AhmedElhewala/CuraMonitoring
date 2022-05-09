@@ -2554,6 +2554,12 @@ nav>ul.container li>ul>li>a {
     -o-transition: var(--main-transition);
 }
 
+@media (max-width: 767px) {
+    .monitoring .container div.monitoring-links a {
+        width: 90%;
+    }
+}
+
 .monitoring .container div.monitoring-links a::after {
     content: "";
     width: 100%;

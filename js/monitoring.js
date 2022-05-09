@@ -29,6 +29,12 @@ let notificationExit = `.notification .notification-exit`;
 let notificationSetting = `.notification .notification-setting`;
 // go up button variables
 let goUpBtn = document.querySelector(`.go-up`);
+// monitoring variables
+let currentScale = `.monitoring .container div.monitoring-current .current-value .current-range .current-scale`;
+let currentValue = `.monitoring .container div.monitoring-current .current-value .current-range .current-scale span.scale-value`;
+let dealwaySection = `.monitoring .container div.monitoring-dealway`;
+let medicineSection = `.monitoring .container div.monitoring-medicine`;
+
 // localstorage values variables
 let saveLogo = localStorage.getItem("logo-color");
 let saveColor = localStorage.getItem("option-color");
@@ -93,9 +99,10 @@ if (saveLanguage !== null) {
     }
 }
 // End check Localstorage
-// Fade preloader out
+// Fade preloader out & update the scale value
 $(document).ready(() => {
     $(preLoad).fadeOut("slow");
+    updateTheScale();
 });
 // Toggle profile menu
 $(profile).on("click", function() {
@@ -310,3 +317,56 @@ goUpBtn.addEventListener("click", () => {
         top: 0
     });
 });
+// Changing the scale
+let changingTheScale = setInterval(function() {
+    let newCurrent = Math.floor(Math.random() * 100);
+    $(currentValue).text(newCurrent);
+    updateTheScale()
+}, 3000);
+
+function updateTheScale() {
+    $(currentScale).width(`${$(currentValue).text()}%`);
+    if ($(currentValue).text() >= 75 || $(currentValue).text() <= 15) {
+        if ($(currentScale).hasClass("current-normal")) {
+            $(currentScale).removeClass("current-normal").addClass("current-emergency");
+        } else if ($(currentScale).hasClass("current-sick")) {
+            $(currentScale).removeClass("current-sick").addClass("current-emergency");
+        }
+    }
+    if (($(currentValue).text() > 50 && $(currentValue).text() < 75) || ($(currentValue).text() > 15 && $(currentValue).text() < 30)) {
+        if ($(currentScale).hasClass("current-normal")) {
+            $(currentScale).removeClass("current-normal").addClass("current-sick");
+        } else if ($(currentScale).hasClass("current-emergency")) {
+            $(currentScale).removeClass("current-emergency").addClass("current-sick");
+        }
+    }
+    if (($(currentValue).text() >= 30 && $(currentValue).text() <= 50)) {
+        if ($(currentScale).hasClass("current-sick")) {
+            $(currentScale).removeClass("current-sick").addClass("current-normal");
+        } else if ($(currentScale).hasClass("current-emergency")) {
+            $(currentScale).removeClass("current-emergency").addClass("current-normal");
+        }
+    }
+    if ($(currentScale).hasClass("current-sick") || $(currentScale).hasClass("current-emergency")) {
+        if (!$(dealwaySection).hasClass("show")) {
+            $(dealwaySection).slideDown("fast");
+            $(dealwaySection).addClass("show");
+        }
+    } else if ($(currentScale).hasClass("current-normal")) {
+        if ($(dealwaySection).hasClass("show")) {
+            $(dealwaySection).slideUp("fast");
+            $(dealwaySection).removeClass("show");
+        }
+    }
+    if ($(currentScale).hasClass("current-sick") || $(currentScale).hasClass("current-emergency")) {
+        if (!$(medicineSection).hasClass("show")) {
+            $(medicineSection).slideDown("fast");
+            $(medicineSection).addClass("show");
+        }
+    } else if ($(currentScale).hasClass("current-normal")) {
+        if ($(medicineSection).hasClass("show")) {
+            $(medicineSection).slideUp("fast");
+            $(medicineSection).removeClass("show");
+        }
+    }
+}

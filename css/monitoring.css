@@ -2225,16 +2225,6 @@ nav>ul.container li>ul>li>a {
     }
 }
 
-.monitoring .container div.monitoring-dealway,
-.monitoring .container div.monitoring-medicine {
-    display: none;
-}
-
-.monitoring .container div.monitoring-dealway.show,
-.monitoring .container div.monitoring-medicine.show {
-    display: flex;
-}
-
 .monitoring .container div.monitoring-section .monitoring-title h5 {
     position: relative;
     line-height: 1;

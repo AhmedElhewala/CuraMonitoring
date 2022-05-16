@@ -2064,7 +2064,7 @@ nav>ul.container li>ul>li>a {
     padding-bottom: var(--section-padding);
     background-image: url("../assets/imgs/background-2.webp");
     background-size: cover;
-    background-color: var(--theme-background);
+    background-color: var(--secondray-background);
     color: var(--theme-color);
     overflow: hidden;
     transition: var(--main-transition);
@@ -2075,7 +2075,7 @@ nav>ul.container li>ul>li>a {
 }
 
 .monitoring .heading {
-    color: var(--theme-color);
+    color: var(--light-color);
     margin: 0 auto 60px;
     position: relative;
     display: -webkit-box;
@@ -2143,10 +2143,11 @@ nav>ul.container li>ul>li>a {
 }
 
 .monitoring .container {
+    margin-top: 20px;
     max-width: 85% !important;
     padding: 50px 40px;
-    color: var(--theme-background);
-    background-color: var(--theme-color);
+    background-color: var(--theme-background);
+    color: var(--theme-color);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2161,6 +2162,8 @@ nav>ul.container li>ul>li>a {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    filter: drop-shadow(0 0 3px var(--theme-color));
+    -webkit-filter: drop-shadow(0 0 3px var(--theme-color));
 }
 
 @media (max-width: 767px) {
@@ -2230,6 +2233,7 @@ nav>ul.container li>ul>li>a {
 
 .monitoring .container div.monitoring-section .monitoring-title h5 {
     position: relative;
+    width: fit-content;
     line-height: 1;
     transition: var(--main-transition);
     -webkit-transition: var(--main-transition);
@@ -2240,6 +2244,7 @@ nav>ul.container li>ul>li>a {
 
 .monitoring .container div.monitoring-section .monitoring-title h5:after {
     content: "";
+    width: 110%;
     height: 2px;
     background-color: var(--option-color);
     position: absolute;
@@ -2255,34 +2260,6 @@ nav>ul.container li>ul>li>a {
     -moz-transition: var(--main-transition);
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
-}
-
-.monitoring .container div.monitoring-pet .monitoring-title h5:after {
-    width: 145px;
-}
-
-.monitoring .container div.monitoring-system .monitoring-title h5:after {
-    width: 190px;
-}
-
-.monitoring .container div.monitoring-normal .monitoring-title h5:after {
-    width: 145px;
-}
-
-.monitoring .container div.monitoring-current .monitoring-title h5:after {
-    width: 150px;
-}
-
-.monitoring .container div.monitoring-decription .monitoring-title h5:after {
-    width: 175px;
-}
-
-.monitoring .container div.monitoring-dealway .monitoring-title h5:after {
-    width: 130px;
-}
-
-.monitoring .container div.monitoring-medicine .monitoring-title h5:after {
-    width: 255px;
 }
 
 .monitoring .container div.monitoring-section .monitoring-value {

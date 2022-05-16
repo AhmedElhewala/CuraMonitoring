@@ -2374,8 +2374,8 @@ nav>ul.container li>ul>li>a {
 .monitoring .container div.monitoring-current .current-value .current-range span {
     width: 30px;
     height: 30px;
-    color: var(--theme-color);
-    background-color: var(--theme-background);
+    background-color: var(--theme-color);
+    color: var(--theme-background);
     font-size: 14px;
     font-weight: bold;
     display: flex;
@@ -2447,13 +2447,13 @@ nav>ul.container li>ul>li>a {
 .monitoring .container div.monitoring-normal .normal-value .normal-range span::before,
 .monitoring .container div.monitoring-current .current-value .current-range .current-scale span.scale-value::before {
     bottom: -12px;
-    border-color: var(--theme-background) transparent transparent transparent;
+    border-color: var(--theme-color) transparent transparent transparent;
 }
 
 .monitoring .container div.monitoring-current .current-value .current-range span.normal-min::before,
 .monitoring .container div.monitoring-current .current-value .current-range span.normal-max::before {
     top: -12px;
-    border-color: transparent transparent var(--theme-background) transparent;
+    border-color: transparent transparent var(--theme-color) transparent;
 }
 
 .monitoring .container div.monitoring-decription .monitoring-value p,
